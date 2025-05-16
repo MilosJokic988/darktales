@@ -1,0 +1,42 @@
+
+.tale-background{
+  background-image: url('./images/castle.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.tale-detail-container {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 2rem;
+  font-family: 'Garamond', serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.full-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #d1d1d1;
+}
+
+.bg-dark {
+  background-color: #1d1d1d;
+}
+
+.border-secondary {
+  border-color: #ccc;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

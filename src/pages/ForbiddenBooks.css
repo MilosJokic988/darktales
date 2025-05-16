@@ -1,0 +1,42 @@
+.forbidden-background {
+  background-image: url('/images/castle.webp'); /* promeni ako treba */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-card {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid #444;
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.book-card h2 {
+  color: #e74c3c;
+  font-family: 'Cinzel Decorative', cursive;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,102 @@
+.darktales-background {
+  background-image: url('./images/castle.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+.dark-tales-container {
+  color: #f0f0f0;
+  padding: 60px 20px 190px 20px;
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  animation: flickerTitle 4s infinite;
+}
+
+.tales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.tale-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  text-decoration: none;
+  color: #eee;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.tale-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #990000aa;
+  animation: whisperPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes flickerTitle {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 0.7; }
+  50% { opacity: 0.5; }
+  60% { opacity: 0.8; }
+}
+
+@keyframes whisperPulse {
+  0% { text-shadow: 0 0 0px #ff0000; }
+  50% { text-shadow: 0 0 10px #ff0000; }
+  100% { text-shadow: 0 0 0px #ff0000; }
+}
+
+/* 🔻 Mobile optimization */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .tales-grid {
+    grid-template-columns: 1fr; /* jedna kolona na manjim uređajima */
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .tale-card {
+    padding: 15px;
+  }
+
+  .tale-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .tale-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .tale-card h3 {
+    font-size: 1rem;
+  }
+
+  .tale-card p {
+    font-size: 0.85rem;
+  }
+
+  .dark-tales-container {
+    padding: 40px 10px 140px 10px;
+  }
+}

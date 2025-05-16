@@ -1,0 +1,18 @@
+/* Footer.css */
+.footer {
+  padding: 1rem;
+  background: #111;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.social-link {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.social-link:hover {
+  color: #fff;
+}

@@ -1,0 +1,218 @@
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  background-color: #000; /* Primer: crna pozadina za mračan stil */
+  color: #fff; /* Bela slova */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+   /* Sprečava horizontalno skrolovanje */
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 40px; /* visina headera */
+  padding-bottom: 40px; /* visina footera */
+}
+
+main {
+  flex-grow: 1;
+}
+
+main {
+  padding-top: 100px; /* Dodaj razmak prema vrhu ako je header fiksiran */
+  flex-grow: 1;
+}
+.gothic-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: #0d0d0d;
+  color: #eaeaea;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80px; /* fiksna visina */
+  font-size: 1rem; /* manji font */
+  font-family: 'Cinzel Decorative', cursive;
+  border-bottom: 1px solid #333;
+  padding: 0; /* uklonjen padding */
+  margin: 0;
+}
+
+.site-title {
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: normal; /* Osiguraj da je font manje podebljan */
+  animation: flicker 3s infinite;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+ 
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  55% { opacity: 0.8; }
+}
+
+
+
+@media (max-width: 768px) {
+  .gothic-header {
+    font-size: 0.8rem;
+    height: 60px;
+    flex-direction: column;
+    padding: 5px 10px;
+  }
+
+  .site-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  .main-layout {
+    padding-top: 60px; /* manja visina headera */
+    padding-bottom: 20px;
+  }
+
+  main {
+    padding-top: 80px; /* prilagođeno za mobilni header */
+  }
+
+  .symbols-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .symbol-card {
+    padding: 10px;
+  }
+
+  .symbol-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .symbol-icon {
+    font-size: 2.2rem;
+  }
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+}
+
+
+
+h1{
+  color: gold;
+}
